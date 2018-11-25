@@ -43,11 +43,13 @@
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
     "@nestjs/microservices": "^5.4.0",
+    "@nestjs/mongoose": "^5.2.2",
     "@nestjs/testing": "^5.4.0",
     "@nestjs/websockets": "^5.4.0",
     "@types/node": "^10.7.1",
     "dotenv": "^6.1.0",
     "joi": "^14.1.0",
+    "mongoose": "^5.3.13",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2"
