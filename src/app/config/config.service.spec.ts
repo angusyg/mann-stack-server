@@ -12,11 +12,11 @@ describe('ConfigService', () => {
       service = module.get<ConfigService>(ConfigService);
     });
 
-    it('should be defined', () => {
+    test('should be defined', () => {
       expect(service).toBeDefined();
     });
 
-    it('should have loaded values', () => {
+    test('should have loaded values', () => {
       expect(service.get('NODE_ENV')).toEqual('test');
       expect(service.get('PORT')).toEqual(5000);
     });
@@ -27,7 +27,7 @@ describe('ConfigService', () => {
       process.env.NODE_ENV = 'test-ko';
     });
 
-    it('should throw an error on configuration validation', async () => {
+    test('should throw an error on configuration validation', async () => {
       try {
         // tslint:disable-next-line:no-unused-expression
         new ConfigService();
