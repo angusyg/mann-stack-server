@@ -28,3 +28,6 @@ npm-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Congiguration
+src/environments/production.env

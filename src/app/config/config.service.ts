@@ -42,6 +42,8 @@ export class ConfigService {
       .valid(['development', 'production', 'test'])
       .default('development'),
     PORT: Joi.number().default(3000),
+    DB_HOST: Joi.string().default('localhost'),
+    DB_NAME: Joi.string().default('mann'),
   });
 
   /**
