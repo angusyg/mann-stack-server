@@ -10,7 +10,7 @@ import * as path from 'path';
  * @interface EnvConfig
  */
 export interface EnvConfig {
-  [key: string]: string;
+  [key: string]: any;
 }
 
 /**
@@ -44,6 +44,10 @@ export class ConfigService {
     PORT: Joi.number().default(3000),
     DB_HOST: Joi.string().default('localhost'),
     DB_NAME: Joi.string().default('mann'),
+    LOG_LEVEL: Joi.string()
+      .valid(['trace', 'debug', 'info', 'warn', 'error', 'fatal'])
+      .default('info'),
+    LOG_ENABLED: Joi.boolean().default(false),
   });
 
   /**
@@ -66,10 +70,10 @@ export class ConfigService {
    * Retrieves a configuration value from its key
    *
    * @param {string} key key of configuration value to retrieve
-   * @returns {string} configuration value
+   * @returns {any} configuration value
    * @memberof ConfigService
    */
-  public get(key: string): string {
+  public get(key: string): any {
     return this.envConfig[key];
   }
 
