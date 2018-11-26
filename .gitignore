@@ -29,5 +29,3 @@ npm-debug.log
 .DS_Store
 Thumbs.db
 
-# Congiguration
-src/environments/production.env
