@@ -23,8 +23,8 @@ export class LogService implements LoggerService {
   constructor(configService: ConfigService) {
     this.logger = pino({
       useLevelLabels: true,
-      enabled: (configService.get('LOG_ENABLED') as boolean) || true,
-      level: configService.get('LOG_LEVEL') || 'info',
+      enabled: configService.get('LOG_ENABLED'),
+      level: configService.get('LOG_LEVEL'),
     });
   }
 
