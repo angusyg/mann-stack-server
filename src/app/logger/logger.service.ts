@@ -28,30 +28,79 @@ export class LogService implements LoggerService {
     });
   }
 
+  /**
+   * Log a message and data with 'trace' level
+   *
+   * @param {*} message message to log
+   * @param {*} [data] additional data to log
+   * @memberof LogService
+   */
   public trace(message: any, data?: any) {
     this.doLog('trace', message, data);
   }
 
+  /**
+   * Log a message and data with 'debug' level
+   *
+   * @param {*} message message to log
+   * @param {*} [data] additional data to log
+   * @memberof LogService
+   */
   public debug(message: any, data?: any) {
     this.doLog('debug', message, data);
   }
 
+  /**
+   * Log a message and data with 'info' level
+   *
+   * @param {*} message message to log
+   * @param {*} [data] additional data to log
+   * @memberof LogService
+   */
   public info(message: any, data?: any) {
     this.doLog('info', message, data);
   }
 
+  /**
+   * Log a message and data with 'info' level
+   *
+   * @param {*} message message to log
+   * @param {*} [data] additional data to log
+   * @memberof LogService
+   */
   public log(message: any, data?: any) {
     this.doLog('info', message, data);
   }
 
+  /**
+   * Log a message and data with 'warn' level
+   *
+   * @param {*} message message to log
+   * @param {*} [data] additional data to log
+   * @memberof LogService
+   */
   public warn(message: any, data?: any) {
     this.doLog('warn', message, data);
   }
 
+  /**
+   * Log a message and data with 'error' level
+   *
+   * @param {*} message message to log
+   * @param {*} [data] additional data to log
+   * @memberof LogService
+   */
   public error(message: any, data?: any) {
     this.doLog('error', message, data);
   }
 
+  /**
+   * Log a message and data with 'fatal' level
+   *
+   * @param {*} message message to log
+   * @param {*} [data] additional data to log
+   * @memberof LogService
+   */
   public fatal(message: any, data?: any) {
     this.doLog('fatal', message, data);
   }
