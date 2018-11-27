@@ -29,6 +29,16 @@ export class LogService implements LoggerService {
   }
 
   /**
+   * Return pino logger instance
+   *
+   * @returns pino logger instance
+   * @memberof LogService
+   */
+  public getLogger() {
+    return this.logger;
+  }
+
+  /**
    * Log a message and data with 'trace' level
    *
    * @param {*} message message to log
